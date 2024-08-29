@@ -4,13 +4,13 @@ from tqdm import tqdm
 def csv_files_in_dir(directory):
     files = []
     for filename in os.listdir(directory):
-        if filename.endswith('.csv') and os.path.isfile(os.path.join(directory, filename)):
+        if filename.endswith('.txt') and os.path.isfile(os.path.join(directory, filename)):
             files.append(filename)
     return files
 
-folder_path = "/Users/sauravreji/Internship/llm"
-output_file_train = "train_split.csv"
-output_file_val = "val_split.csv"
+folder_path = "/Users/sauravreji/Internship/model"
+output_file_train = "output_train.txt"
+output_file_val = "output_val.txt"
 vocab_file = "vocab.txt"
 
 files = csv_files_in_dir(folder_path)

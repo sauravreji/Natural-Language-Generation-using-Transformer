@@ -9,8 +9,8 @@ def csv_files_in_dir(directory):
     return files
 
 folder_path = "/Users/sauravreji/Internship/llm"
-output_file_train = "output_train.csv"
-output_file_val = "output_val.csv"
+output_file_train = "train_split.csv"
+output_file_val = "val_split.csv"
 vocab_file = "vocab.txt"
 
 files = csv_files_in_dir(folder_path)

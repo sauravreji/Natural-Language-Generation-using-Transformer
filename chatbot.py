@@ -18,7 +18,7 @@ print(f'batch size: {args.batch_size}')
 device = 'mps' if torch.backends.mps.is_available() else 'cpu'
 print(device)
 
-batch_size = args.batch_size #how many run in parallel
+batch_size = int(args.batch_size) #how many run in parallel
 block_size = 32 #length of integer
 
 
@@ -207,3 +207,7 @@ while True:
     context = torch.tensor(encode(prompt), dtype=torch.long, device=device)
     generated_chars = decode(m.generate(context.unsqueeze(0), max_new_tokens=150)[0].tolist())
     print(f'Completion:\n{generated_chars}')
+    
+
+
+    

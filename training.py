@@ -18,7 +18,7 @@ print(f'batch size: {args.batch_size}')
 device = 'mps' if torch.backends.mps.is_available() else 'cpu'
 print(device)
 
-batch_size = args.batch_size #how many run in parallel
+batch_size = int(args.batch_size) #how many run in parallel
 block_size = 32 #length of integer
 
 
@@ -51,7 +51,7 @@ The above is a character tokenizer ie it converts each character so we can't use
 
 # memory map for using small snippets of text from a single file of any size
 def get_random_chunk(split):
-    filename = "train_split.csv" if split == 'train' else "val_split.csv"
+    filename = "output_train.txt" if split == 'train' else "output_val.txt"
     with open(filename, 'rb') as f:
         with mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) as mm:
             # Determine the file size and a random position to start reading
@@ -233,10 +233,10 @@ class GPTLanguageModel(nn.Module):
         return index
 
 model = GPTLanguageModel(vocab_size)
-"""print("loading model parameters")
+print("loading model parameters")
 with open('model-01.pkl','rb') as f:
     model = pickle.load(f)
-print("model loaded")"""
+print("model loaded")
 m = model.to(device)
 
 
@@ -264,7 +264,3 @@ print(loss.item())
 with open('model-01.pkl','wb') as f:
     pickle.dump(model,f)
 print("model saved")
-
-context = torch.zeros((1, 1), dtype=torch.long, device=device)
-generated_chars = decode(m.generate(context,max_new_tokens = 500)[0].tolist())
-print(generated_chars)

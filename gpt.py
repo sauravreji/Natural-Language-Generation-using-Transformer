@@ -42,12 +42,7 @@ string_to_int = { ch:i for i,ch in enumerate(chars) }
 int_to_string = { i:ch for i,ch in enumerate(chars) }
 encode = lambda s: [string_to_int[c] for c in s]
 decode = lambda l: ''.join([int_to_string[i] for i in l])
-"""encoded_hello = encode('hello') #converts hello into integer
-decoded_hello = decode(encoded_hello) 
-print(decoded_hello)
-The above is a character tokenizer ie it converts each character so we can't use it since it will have a big data
 
-"""
 
 
 

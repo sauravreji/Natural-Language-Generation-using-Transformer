@@ -27,9 +27,7 @@ Ensure that the batch-size is passed with the command (Ex: -batch_size 32)
 ```bash
 python gpt.py
 ```
-# Acknowledgments
 
-Special thanks to Elliotcodes for helping me understand how to create a GPT-style model.
 
 
 

@@ -1,4 +1,5 @@
-# GPT Language Model Implementation
+# Transformenr-for-Natural-Language-Generation
+
 
 This repository contains an implementation of a GPT-style language model using PyTorch. The model is designed to handle character-level tokenization and utilizes a Transformer architecture for natural language processing tasks. This specific implementation is focused on predicting the type of graph based on a given query.
 
@@ -27,6 +28,9 @@ Ensure that the batch-size is passed with the command (Ex: -batch_size 32)
 ```bash
 python gpt.py
 ```
+# Acknowledgments
+
+Special thanks to Elliotcodes for helping me understand how about a GPT-style model.
 
 
 

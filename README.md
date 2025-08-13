@@ -1,4 +1,4 @@
-# Transformenr-for-Natural-Language-Generation
+# Natural Language Generation using Transformer
 
 
 This repository contains an implementation of a GPT-style language model using PyTorch. The model is designed to handle character-level tokenization and utilizes a Transformer architecture for natural language processing tasks. This specific implementation is focused on predicting the type of graph based on a given query.

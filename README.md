@@ -30,7 +30,7 @@ python gpt.py
 ```
 # Acknowledgments
 
-Special thanks to Elliotcodes for helping me understand how about a GPT-style model.
+Special thanks to Elliotcodes for helping me understand the architecture of GPT-style models.
 
 
 
